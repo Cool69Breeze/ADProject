@@ -1,0 +1,19 @@
+behaviors:
+  PongBall:
+    trainer_type: ppo
+    max_steps: 500000
+    time_horizon: 64
+    summary_freq: 10000
+
+    reward_signals:
+      extrinsic:
+        strength: 1.0
+
+    hyperparameters:
+      batch_size: 64
+      buffer_size: 256
+      learning_rate: 0.0003
+    network_settings:
+      normalize: false
+      hidden_units: 128
+      num_layers: 2
